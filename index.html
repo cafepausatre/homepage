@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="webサイトについての解説">
+    <title>Cafe Pausa Tre</title>
+
+    <!-- webフォント -->
+    <link rel="stylesheet" href="https://use.typekit.net/wuf4lqg.css">
+    <script>
+        (function(d) {
+            var config = {
+                kitId: 'wuf4lqg',
+                scriptTimeout: 3000,
+                async: true
+        },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+    <!-- css -->
+     <link rel="stylesheet" href="assets/css/destyle.css">
+     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- FontAwesome -->
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="container" class="container">
+        <header class="header">
+            <h1 class="header__topic"><a href="#">Pausa Tre</a></h1>
+                <button type="button" class="MenuBtn Style01">
+                    <span class="MenuBtn-BarFrame">
+                            <span class="MenuBtn-BarFrame-FirstBar"></span>
+                            <span class="MenuBtn-BarFrame-SecondBar"></span>
+                            <span class="MenuBtn-BarFrame-ThirdBar"></span>
+                    </span>
+                </button>
+            <nav class="nav">
+                <div class="nav__header">
+                </div>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#top">Top</a></li>
+                    <li class="nav__item"><a href="#concept">Concept</a></li>
+                    <li class="nav__item"><a href="#mobileOrder">Mobile Order</a></li>
+                    <li class="nav__item"><a href="#menu">Menu</a></li>
+                    <li class="nav__item"><a href="#access">Access</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <article class="article" id="top">
+                <header class="article__header">
+                    <div class="slider-container">
+                        <div class="slideimg">
+                            <img src="assets/images/main1.jpeg" alt="ラテアートの写真">
+                        </div>
+                        <div class="slideimg">
+                            <img src="assets/images/main2.jpeg" alt="エスプレッソ抽出の写真">
+                        </div>
+                        <div class="slideimg">
+                            <img src="assets/images/main3.jpeg" alt="エスプレッソ抽出の写真">
+                        </div>
+                    </div>
+                </header>
+                <section id="concept" class="section section--concept">
+                    <h3 class="section__topic">Concept</h3>
+                    <div class="mainTopics">
+                         <h2 class="mainTopics__name">忙しい毎日に寄り添う、<br>立ち飲みスタイルのコーヒースタンドです。</h2>
+                         <p class="mainTopics__txt">スペシャリティグレードの豆を丁寧に抽出した<br>エスプレッソやコーヒーを手に届く価格で。<br>モバイルオーダー対応で、待たずに受け取れます。</p>
+                         <div class="concept__btn">
+                            <a href="#">Learn More</a>
+                        </div>  
+                    </div>
+                </section>
+                <section id="mobileOrder" class="section section--mobileOrder">
+                    <h3 class="section__topic">Mobile Order</h3>
+                        <h2 class="order__txt">事前にご注文いただくと、店頭ですぐにコーヒーを受け取れます。</h2>
+                        <div class="concept__btn">
+                            <a href="#">Tap to Order</a>
+                        </div>  
+                </section>
+                <section id="menu" class="section section--menu">
+                    <h3 class="section__topic">Menu</h3>
+                    <h2 class="menu__txt">エスプレッソ以外にも、ノンカフェイン、スイーツ類も幅広くご用意しております。</h2>
+                    <ul class="menu">
+                        <li class="menu__item">
+                            <p class="menu__img"><img src="assets/images/menu_espresso.jpeg" alt="エスプレッソの写真"></p>
+                            <div class="menu__content">
+                                <h4 class="menu__menu">エスプレッソ</h4>
+                                <p class="menu__txt">COEで80点以上のスペシャリティ豆を使用しております。</p>
+                            </div>
+                        </li>
+                        <li class="menu__item">
+                            <p class="menu__img"><img src="assets/images/menu_coffee.png" alt="アメリカーノの写真"></p>
+                            <div class="menu__content">
+                                <h4 class="menu__menu">アメリカーノ</h4>
+                                <p class="menu__txt">コーヒーの代わりにエスプレッソをお湯で割って飲みます。</p>
+                            </div>
+                        </li>
+                        <li class="menu__item">
+                            <p class="menu__img"><img src="assets/images/menu_caffellatte.png" alt="カフェラテの写真"></p>
+                            <div class="menu__content">
+                                <h4 class="menu__menu">カフェラテ</h4>
+                                <p class="menu__txt">クリーミーなミルクとエスプレッソの味わいが楽しめます。</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="concept__btn">
+                        <a href="#">Learn More</a>
+                    </div>  
+                </section>
+                <section id="access" class="section section--access">
+                    <h3 class="section__topic">Access</h3>
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2292.0958922136742!2d139.75172910409745!3d35.664366072435236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b5d361700f3%3A0x5919fca25028225a!2z44Op44Oz44OH44Kj44OD44Kv5paw5qmL44OT44Or!5e0!3m2!1sja!2sjp!4v1755949555447!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <address class="address">〒105-0003 東京都港区西新橋3丁目8-3 ランディック新橋ビル<br>御成門駅A5出口より徒歩5分</address>
+                    <ul class="directions">
+                        <li class="directions__item">
+                            <h4 class="directions__topic">営業時間</h4>
+                            <p class="directions__txt">7:30~18:00</p>
+                        </li>
+                        <li class="directions__item">
+                            <h4 class="directions__topic">定休日</h4>
+                            <p class="directions__txt">日・月</p>
+                        </li>
+                    </ul>
+                </section>
+            </article>
+        </main>
+        <footer  class="footer">
+        <div>
+            <p class="sns__txt">Instagramにてお店の最新情報をご確認いただけます。</p>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <div>
+            <i class="fa-solid fa-chevron-up"></i>
+            <div class="totop"><a href="#">Top</a></div>
+        </div>
+        <p class="copy"><small>&copy; 2025 Pausa Tre</small></p>
+        </footer>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

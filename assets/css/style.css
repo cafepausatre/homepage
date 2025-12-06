@@ -1,0 +1,449 @@
+@charset "utf-8";
+/* =====================
+common
+================== */
+html{
+    font-size: 62.5%;
+}
+
+body { 
+    font-family:
+        "arno-pro-display",
+         sans-serif;
+    font-style: normal;
+    color: #2f2f2f;
+    background-color: #fff;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section__topic{
+    font-family: "arno-pro-display", sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* =====================
+header
+================== */
+.header {
+    position: fixed; /* 画面上に固定 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 6.4% 6px;
+    z-index: 1000; /* navより上 */
+    box-sizing: border-box;
+    background-color: white;
+}
+
+    .main {
+    padding-top: 40px; /* ヘッダーの高さと同じだけ確保 */
+}
+
+.header__topic {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1; /* 文字の高さをボタンに合わせる */
+    padding-top: 5px;}
+
+/* .nav初期表示 */
+.nav {
+    background: white;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 15px 6.4% 16px;
+    transform: translateX(-100%);
+    transition: transform 0.4s;
+}
+
+/* nav 開いた状態 */
+.nav.is-open {
+    transform: translateX(0%);
+}
+
+
+.nav__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__btn {
+    font-size: 2.5rem;
+}
+.nav__list {
+    margin-top: 70px;
+}
+
+.nav__item {
+    margin-top: 25px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* .header pc */
+@media screen and (min-width:769px){
+    .nav{
+        background: transparent;
+        width: auto;
+        height: auto;
+        padding: 0px;
+        position: static;
+        transform: translate(0);
+    }
+
+    .nav__list{
+        display: flex;
+        margin-top: 0;
+    }
+
+    .nav__item{
+        margin-left: 30px;
+        margin-top: 0;
+    }
+
+    .nav__item:first-of-type {
+        display: none;
+    }
+
+    button.MenuBtn.Style01 {
+        display: none;
+    }
+
+    .slider-container {
+        height: 800px !important; /* 上書き */
+    }
+
+    .header {
+        justify-content: space-between !important; /* PCでも中央寄せにならない */
+        padding: 15px 6.4% 16px;
+    }
+
+    .main {
+    padding-top: 60px; /* ヘッダーの高さと同じだけ確保 */
+    }
+}
+
+/* .header pc end */
+
+/* ハンバーガーメニューCSS */
+
+.MenuBtn.Style01 {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MenuBtn.Style01 .MenuBtn-BarFrame {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 2px;
+}
+
+.MenuBtn.Style01 .MenuBtn-BarFrame-FirstBar {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #2f2f2f;
+    transition: all .15s linear;
+}
+
+.MenuBtn.Style01 .MenuBtn-BarFrame-SecondBar {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #2f2f2f;
+    transition: all .15s linear;
+    transform: translateY(-8px) rotate(0deg);
+}
+
+.MenuBtn.Style01 .MenuBtn-BarFrame-ThirdBar {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #2f2f2f;
+    transition: all .15s linear;
+    transform: translateY(8px) rotate(0deg);
+}
+
+.MenuBtn.Style01.isClosed .MenuBtn-BarFrame-FirstBar {
+    opacity: 0;
+}
+
+.MenuBtn.Style01.isClosed .MenuBtn-BarFrame-SecondBar {
+    transform: translateY(0) rotate(45deg);
+}
+
+.MenuBtn.Style01.isClosed .MenuBtn-BarFrame-ThirdBar {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.MenuBtn {
+    position: relative;
+    z-index: 200; /* navより上に配置する */
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 250px; /* スライダーの高さ */
+    overflow: hidden;
+}
+
+.slideimg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideimg.active {
+    opacity: 1;
+}
+
+.mainTopics {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-family: "hiragino-mincho-pron", sans-serif;
+}
+
+.order__txt{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-family: "hiragino-mincho-pron", sans-serif;
+    padding: 0px 4.2%;
+    }
+
+/* ボタン設定始まり */
+
+.concept__btn a {
+  font-family: "arno-pro-display", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.1em;
+  color: #333;
+  font-weight: 400;
+  border: 1px solid #333;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  max-width: 300px;
+  text-align: center; 
+  padding: 16px 64px;
+  margin: 30px;
+  margin-inline: auto;
+  text-decoration: none;
+  cursor: pointer;
+  z-index:999;
+  transition: all 0.3s;
+}
+
+.concept__btn a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -30px;
+  width: 60px;
+  height: 1px;
+  background: #333;
+  transition: all 0.3s ease;
+}
+
+.concept__btn a:hover::after {
+  animation: OutIn-Line 700ms;
+  transition: all 0.3s;
+}
+
+@keyframes OutIn-Line {
+    0% {
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+        -webkit-transform-origin: 100% 0;
+        transform-origin: 100% 0
+    }
+
+    50% {
+        -webkit-transform: scale3d(0,1,1);
+        transform: scale3d(0,1,1);
+        -webkit-transform-origin: 100% 0;
+        transform-origin: 100% 0
+    }
+
+    50.1% {
+        -webkit-transform: scale3d(0,1,1);
+        transform: scale3d(0,1,1);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0
+    }
+
+    100% {
+        -webkit-transform: scale3d(1,1,1);
+        transform: scale3d(1,1,1);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+}
+/* ボタン設定終わり*/
+
+/* 各セクションのマージン*/
+ 
+.section--mobileOrder,
+.section--menu,
+.section--access {
+    margin-top: 70px;
+    padding: 0px 4.2%;
+} 
+
+/* メニューカードの設定 */
+.menu__item {
+    padding: 20px 4.2%;
+    text-align: center;
+    font-family: "hiragino-mincho-pron", sans-serif;
+    font-size: 1.4rem;
+    margin: 2em;
+    background: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 0px 20px rgba(0,0,0,0.2);
+}
+
+.menu__img {
+    margin: 0 auto;
+    text-align: center;
+    width: 200px;
+}
+
+.menu__menu {
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
+
+.menu__txt {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-family: "hiragino-mincho-pron", sans-serif;
+}
+
+/* .menu pc */
+@media screen and (min-width: 769px) {
+    .menu {
+        display: flex;
+        justify-content: center;   /* 横方向の中央揃え */
+        gap: 10px;                 /* カード間の余白 */
+        flex-wrap: nowrap;           /* 横幅が狭いとき折り返す */
+        max-width: 1000px;         /* 最大幅を制限 */
+        margin: 0 auto;            /* 親要素の中で中央に配置 */
+        padding: 0;
+    }
+
+    .menu__item {
+    flex: 0 1 300px;   /* カード幅を揃える */
+    }
+}
+
+.section--access {
+    font-family: "hiragino-mincho-pron", sans-serif;
+}
+
+.address {
+    margin-top: 20px;
+    padding: 0px 4.2%;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.directions__topic {
+    font-weight: bold;
+    margin-top: 10px;
+    margin-top: 20px;
+}
+
+.directions__item {
+    padding: 0px 4.2%;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.map {
+    display: flex;
+    margin: 0 auto;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+/* .header pc */
+@media screen and (min-width:769px){
+    .map{
+        width: 600px;
+        height: 400px;
+    }
+}
+
+.footer {
+  text-align: center;   /* 中央寄せ */
+}
+
+.sns__txt{
+    margin-top: 50px;
+    font-size: 1.4rem;
+    font-family: "hiragino-mincho-pron", sans-serif;
+}
+
+i {
+     font-size: 3rem;
+     margin-top: 20px;
+}
+
+.fa-instagram:hover {
+  color: #691C23;
+  transition: color 0.3s ease;
+  transition: transform .6s ease; /* ゆっくり変化させる */
+  transform: scale(1.1); /* 拡大 */
+}
+
+.copy {
+    margin-top: 50px;
+    font-size: 2rem;
+    font-family: "arno-pro-display", sans-serif;
+}
+
+.fa-chevron-up {
+  font-size: 2rem; /* 大きさ */
+  margin-top: 50px;
+}
+
+.totop {
+    font-size: 2rem;
+}
