@@ -1,4 +1,10 @@
 @charset "utf-8";
+
+@font-face {
+  font-family: "MyFont";
+  src: url("../fonts/MyFont.ttf") format("truetype");
+}
+
 /* =====================
 common
 ================== */
@@ -8,12 +14,13 @@ html{
 
 body { 
     font-family:
-        "arno-pro-display",
+        "MyFont",
          sans-serif;
     font-style: normal;
     color: #2f2f2f;
     background-color: #fff;
     line-height: 1.5;
+    font-weight: 600;
 }
 
 img {
@@ -22,7 +29,7 @@ img {
 }
 
 .section__topic{
-    font-family: "arno-pro-display", sans-serif;
+    /* font-family: "arno-pro-display", sans-serif; */
     font-size: 3.2rem;
     font-weight: 700;
     line-height: 1.3;
@@ -41,21 +48,26 @@ header
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 6.4% 6px;
+    padding: 4px 6.4%;
     z-index: 1000; /* navより上 */
     box-sizing: border-box;
     background-color: white;
 }
 
-    .main {
+.main {
     padding-top: 40px; /* ヘッダーの高さと同じだけ確保 */
 }
 
 .header__topic {
-    font-size: 2.4rem;
-    font-weight: 700;
-    line-height: 1; /* 文字の高さをボタンに合わせる */
-    padding-top: 5px;}
+  padding: 0;
+  line-height: 0;
+}
+
+.header__topic img {
+  height: 38px;   /* ← 好みで 36〜42px */
+  width: auto;
+  display: block;
+}
 
 /* .nav初期表示 */
 .nav {
@@ -232,7 +244,14 @@ header
     margin-top: 20px;
     font-size: 1.4rem;
     line-height: 2rem;
-    font-family: "hiragino-mincho-pron", sans-serif;
+    /* font-family: "hiragino-mincho-pron", sans-serif; */
+}
+
+.mainTopics__catch {
+    font-size: 1.8rem;   /* 大きくしたいサイズ */
+    font-weight: 700;    /* 強調したい場合 */
+    display: inline-block;
+    margin-bottom: 0.5em;
 }
 
 .order__txt{
@@ -241,18 +260,18 @@ header
     margin-top: 20px;
     font-size: 1.4rem;
     line-height: 2rem;
-    font-family: "hiragino-mincho-pron", sans-serif;
+    /* font-family: "hiragino-mincho-pron", sans-serif; */
     padding: 0px 4.2%;
     }
 
 /* ボタン設定始まり */
 
 .concept__btn a {
-  font-family: "arno-pro-display", sans-serif;
+  /* font-family: "arno-pro-display", sans-serif; */
   font-size: 1.8rem;
   letter-spacing: 0.1em;
   color: #333;
-  font-weight: 400;
+  font-weight: 600;
   border: 1px solid #333;
   display: block;
   position: relative;
@@ -328,7 +347,7 @@ header
 .menu__item {
     padding: 20px 4.2%;
     text-align: center;
-    font-family: "hiragino-mincho-pron", sans-serif;
+    /* font-family: "hiragino-mincho-pron", sans-serif; */
     font-size: 1.4rem;
     margin: 2em;
     background: #FFF;
@@ -353,7 +372,7 @@ header
     margin-top: 20px;
     font-size: 1.4rem;
     line-height: 2rem;
-    font-family: "hiragino-mincho-pron", sans-serif;
+    /* font-family: "hiragino-mincho-pron", sans-serif; */
 }
 
 /* .menu pc */
@@ -373,15 +392,17 @@ header
     }
 }
 
-.section--access {
-    font-family: "hiragino-mincho-pron", sans-serif;
-}
-
 .address {
     margin-top: 20px;
     padding: 0px 4.2%;
     font-size: 1.4rem;
     text-align: center;
+}
+
+.address__station {
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-bottom: 0.5em;
 }
 
 .directions__topic {
@@ -418,7 +439,7 @@ header
 .sns__txt{
     margin-top: 50px;
     font-size: 1.4rem;
-    font-family: "hiragino-mincho-pron", sans-serif;
+    /* font-family: "hiragino-mincho-pron", sans-serif; */
 }
 
 i {
@@ -427,16 +448,22 @@ i {
 }
 
 .fa-instagram:hover {
-  color: #691C23;
+  /* color: #691C23; */
   transition: color 0.3s ease;
   transition: transform .6s ease; /* ゆっくり変化させる */
   transform: scale(1.1); /* 拡大 */
 }
 
+.logo {
+    margin-top: 50px;
+    width: 120px;
+    height: auto;
+}
+
 .copy {
     margin-top: 50px;
     font-size: 2rem;
-    font-family: "arno-pro-display", sans-serif;
+    padding-bottom: 20px;
 }
 
 .fa-chevron-up {
@@ -445,5 +472,5 @@ i {
 }
 
 .totop {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
