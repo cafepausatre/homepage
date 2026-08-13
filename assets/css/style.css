@@ -238,6 +238,39 @@ header
     opacity: 1;
 }
 
+.hero__inner {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.hero__title {
+    font-size: 1.8rem;   /* 大きくしたいサイズ */
+    font-weight: 700;    /* 強調したい場合 */
+    display: inline-block;
+}
+
+.hero__copy {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 3rem;
+}
+
+
+
+/* 初期（スマホ）では改行する */
+.sp-only {
+    display: block;
+}
+
+/* PCでは改行しない */
+@media screen and (min-width: 769px) {
+    .sp-only {
+        display: none;
+    }
+}
+
 .mainTopics {
     margin: 0 auto;
     text-align: center;
@@ -247,11 +280,26 @@ header
     /* font-family: "hiragino-mincho-pron", sans-serif; */
 }
 
+.mainTopics p {
+    margin-bottom: 1em;
+}
+
 .mainTopics__catch {
-    font-size: 1.8rem;   /* 大きくしたいサイズ */
+    font-size: 2rem;   /* 大きくしたいサイズ */
     font-weight: 700;    /* 強調したい場合 */
     display: inline-block;
     margin-bottom: 0.5em;
+}
+
+.mainTopics__text
+    {
+    font-size: 1.6rem;   /* 大きくしたいサイズ */
+}
+
+.mainTopics__text2
+    {
+    font-size: 1.6rem;   /* 大きくしたいサイズ */
+    margin-top: 30px;
 }
 
 .order__txt{
@@ -345,7 +393,7 @@ header
 
 /* メニューカードの設定 */
 .menu__item {
-    padding: 20px 4.2%;
+    padding: 20px 12px;
     text-align: center;
     /* font-family: "hiragino-mincho-pron", sans-serif; */
     font-size: 1.4rem;
@@ -363,13 +411,13 @@ header
 
 .menu__menu {
     font-size: 1.8rem;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
 .menu__txt {
     margin: 0 auto;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 1.4rem;
     line-height: 2rem;
     /* font-family: "hiragino-mincho-pron", sans-serif; */
