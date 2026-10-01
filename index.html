@@ -17,11 +17,16 @@
     <meta name="description" content="Cafe Pausa Treは、西新橋・新橋エリアで本格的なスペシャルティコーヒーを気軽に楽しめる、テイクアウト中心のカフェです。出勤前や仕事の合間、ランチ後、帰宅前、観光・街歩きの途中にもご利用いただけます。">
     <title>西新橋・新橋のカフェ Cafe Pausa Tre｜スペシャルティコーヒーとエスプレッソ</title>
     
+    <link rel="canonical" href="https://cafepausatre.github.io/homepage/">
+    <link rel="alternate" hreflang="ja" href="https://cafepausatre.github.io/homepage/">
+    <link rel="alternate" hreflang="en" href="https://cafepausatre.github.io/homepage/en.html">
+    <link rel="alternate" hreflang="x-default" href="https://cafepausatre.github.io/homepage/">
+    <meta property="og:locale" content="ja_JP">
     <meta property="og:title" content="西新橋・新橋のカフェ Cafe Pausa Tre｜スペシャルティコーヒーとエスプレッソ">
     <meta property="og:description" content="西新橋で、上質なスペシャルティコーヒーを気軽に。仕事の合間や観光・街歩きの途中にも立ち寄れる、テイクアウト中心のカフェです。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://pausatre.com/">
-    <meta property="og:image" content="assets/images/main1.jpeg">
+    <meta property="og:url" content="https://cafepausatre.github.io/homepage/">
+    <meta property="og:image" content="https://cafepausatre.github.io/homepage/assets/images/main1.jpeg">
 
     <script>
         (function(d) {
@@ -36,6 +41,7 @@
     <!-- css -->
      <link rel="stylesheet" href="assets/css/destyle.css">
      <link rel="stylesheet" href="assets/css/style.css">
+     <link rel="stylesheet" href="assets/css/language.css">
     <!-- FontAwesome -->
      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 </head>
@@ -47,14 +53,15 @@
                     <img src="assets/images/logo2.svg" alt="Cafe Pausa Tre ロゴ">
                 </a>
             </h1>
-                <button type="button" class="MenuBtn Style01">
+            <div class="language-switch" aria-label="言語選択"><a href="index.html" lang="ja" aria-current="page">日本語</a><span aria-hidden="true">/</span><a href="en.html" lang="en" hreflang="en">EN</a></div>
+                <button type="button" class="MenuBtn Style01" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
                     <span class="MenuBtn-BarFrame">
                             <span class="MenuBtn-BarFrame-FirstBar"></span>
                             <span class="MenuBtn-BarFrame-SecondBar"></span>
                             <span class="MenuBtn-BarFrame-ThirdBar"></span>
                     </span>
                 </button>
-            <nav class="nav">
+            <nav class="nav" id="site-nav" aria-label="メインナビゲーション">
                 <div class="nav__header">
                 </div>
                 <ul class="nav__list">
@@ -91,7 +98,7 @@
                     </div>
                         <div class="hero__copy">
                             <p>
-                                <span style="display:inline-block;">上質な</span><span style="display:inline-block;">スペシャルティコーヒーを</span><span style="display:inline-block;">西新橋で</span><span style="display:inline-block;"></span>気軽に。</span>
+                                <span style="display:inline-block;">上質な</span><span style="display:inline-block;">スペシャルティコーヒーを</span><span style="display:inline-block;">西新橋で</span><span style="display:inline-block;">気軽に。</span>
                             </p>
                             <p>
                                 <span style="display:inline-block;">出勤前や仕事の合間、</span><br class="sp-only">
@@ -177,12 +184,12 @@
                         </li>
                     </ul>
                     <div class="concept__btn">
-                        <a href="assets/pdf/Menu.pdf" target="_blank">Learn More</a>
+                        <a href="assets/pdf/Menu.pdf" target="_blank" rel="noopener noreferrer">Learn More</a>
                     </div> 
                 </section>
                 <section id="access" class="section section--access">
                     <h3 class="section__topic">Access</h3>
-                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6483.020074945788!2d139.75030337505996!3d35.6644414308973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bd2297b1b01%3A0xc5c394a235b63493!2zQ2FmZSBQYXVzYSBUcmXvvIjjgqvjg5Xjgqcg44OR44Km44K244OI44Os77yJ!5e0!3m2!1sja!2sjp!4v1770026679357!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe title="Cafe Pausa Treの地図" class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6483.020074945788!2d139.75030337505996!3d35.6644414308973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bd2297b1b01%3A0xc5c394a235b63493!2zQ2FmZSBQYXVzYSBUcmXvvIjjgqvjg5Xjgqcg44OR44Km44K244OI44Os77yJ!5e0!3m2!1sja!2sjp!4v1770026679357!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <address class="address">〒105-0003<br><span style="display:inline-block;">東京都港区西新橋</span><span style="display:inline-block;">3丁目8-3</span><br><span style="display:inline-block;">ランディック新橋ビル1F</span><br><span class="address__station"><span style="display:inline-block;">都営三田線 御成門駅・</span><span style="display:inline-block;">内幸町駅から</span><span style="display:inline-block;">徒歩5分</span><br><span style="display:inline-block;">JR新橋駅から</span><span style="display:inline-block;">徒歩10分</span></span></address>
                     
                     <p class="menu__txt" style="text-align: center; margin-bottom: 30px;">
@@ -192,7 +199,7 @@
                     <ul class="directions">
                         <li class="directions__item">
                             <h4 class="directions__topic">営業時間</h4>
-                            <p class="directions__txt"><span style="display:inline-block;">月・火 7:30〜16:00</span><br><span style="display:inline-block;">水〜金 7:30〜18:00</span><br><span style="display:inline-block;">土 11:00〜16:00</span><br><span style="display:inline-block;">日・祝 10:00〜17:00</span></p>
+                            <p class="directions__txt"><span style="display:inline-block;">月・火 7:30〜16:00</span><br><span style="display:inline-block;">水〜金 7:30〜18:00</span><br><span style="display:inline-block;">土 10:00〜17:00</span><br><span style="display:inline-block;">日・祝 11:00〜16:00</span></p>
                         </li>
                         <li class="directions__item">
                             <h4 class="directions__topic">定休日</h4>
@@ -203,7 +210,7 @@
                     <div style="text-align: center; margin-top: 30px;">
                         <p class="menu__txt"><span style="display:inline-block;">臨時休業や営業時間の変更、</span><br><span style="display:inline-block;">季節のメニュー、</span><br><span style="display:inline-block;">イベント情報は</span><span style="display:inline-block;">Instagramで</span><span style="display:inline-block;">お知らせしています。</span></p>
                         <div class="concept__btn" style="margin-top: 15px; white-space: nowrap;">
-                            <a href="https://www.instagram.com/pausa_tre" target="_blank">Instagramを見る</a>
+                            <a href="https://www.instagram.com/pausa_tre" target="_blank" rel="noopener noreferrer">Instagramを見る</a>
                         </div>
                     </div>
                 </section>
@@ -215,9 +222,9 @@
             <p style="margin-bottom: 20px;"><span style="display:inline-block;">忙しい毎日に、</span><span style="display:inline-block;">3分の休息を。</span></p>
             <p style="font-size: 0.9em; margin-bottom: 20px;"><span style="display:inline-block;">東京都港区西新橋</span><span style="display:inline-block;">3丁目8-3</span><br><span style="display:inline-block;">ランディック新橋ビル1F</span></p>
             <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; font-size: 0.9em;">
-                <li><a href="https://www.instagram.com/pausa_tre" target="_blank" style="text-decoration: underline;">Instagram</a></li>
-                <li><a href="https://www.google.com/maps?cid=14250493397985424531" target="_blank" style="text-decoration: underline;">Googleマップ</a></li>
-                <li><a href="https://pausatre.lbb-r.com/" target="_blank" style="text-decoration: underline;">モバイルオーダー</a></li>
+                <li><a href="https://www.instagram.com/pausa_tre" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Instagram</a></li>
+                <li><a href="https://www.google.com/maps?cid=14250493397985424531" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Googleマップ</a></li>
+                <li><a href="https://pausatre.lbb-r.com/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">モバイルオーダー</a></li>
                 <li><a href="#menu" style="text-decoration: underline;">メニュー</a></li>
             </ul>
         </div>
