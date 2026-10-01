@@ -5,16 +5,38 @@ document.addEventListener("DOMContentLoaded", function() {
     const navLinks = document.querySelectorAll(".nav__list a");
     const header = document.querySelector(".header");
 
+    // Keep campaign parameters when visitors choose another language.
+    document.querySelectorAll('.language-switch a').forEach(link => {
+        const destination = new URL(link.getAttribute('href'), window.location.href);
+        destination.search = window.location.search;
+        destination.hash = window.location.hash;
+        link.href = destination.href;
+    });
+
+    const menuLabel = document.documentElement.lang === 'en'
+        ? { open: 'Open menu', close: 'Close menu' }
+        : { open: 'メニューを開く', close: 'メニューを閉じる' };
+    function setMenuState(open) {
+        menuBtn.classList.toggle('isClosed', open);
+        nav.classList.toggle('is-open', open);
+        menuBtn.setAttribute('aria-expanded', String(open));
+        menuBtn.setAttribute('aria-label', open ? menuLabel.close : menuLabel.open);
+    }
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && nav.classList.contains('is-open')) {
+            setMenuState(false);
+            menuBtn.focus();
+        }
+    });
+
     // ===== ハンバーガーメニュー開閉 =====
     menuBtn.addEventListener("click", () => {
-        menuBtn.classList.toggle("isClosed");
-        nav.classList.toggle("is-open"); // transform はCSS側で切り替え
+        setMenuState(!nav.classList.contains("is-open"));
     });
 
     if (closeBtn) {
         closeBtn.addEventListener("click", () => {
-            menuBtn.classList.remove("isClosed");
-            nav.classList.remove("is-open");
+            setMenuState(false);
         });
     }
 
@@ -23,8 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
         link.addEventListener("click", function(e) {
             e.preventDefault();
 
-            menuBtn.classList.remove("isClosed");
-            nav.classList.remove("is-open");
+            setMenuState(false);
 
             const targetId = this.getAttribute("href").substring(1);
             const targetEl = document.getElementById(targetId);
