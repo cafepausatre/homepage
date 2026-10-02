@@ -36,3 +36,36 @@ html[lang="en"] .address__station { font-size: 1.3rem; margin-top: 12px; }
 @media (min-width: 769px) {
   html[lang="en"] .menu__item { margin: 24px 12px; }
 }
+
+/* Real product photographs and a clear everyday menu. */
+body { font-size: 1.6rem; }
+.article__header .slider-container { height: clamp(250px, 38vw, 430px) !important; }
+.slideimg img { width:100%; height:100%; object-fit:cover; object-position:center; }
+.hero__inner { margin-top:32px; }
+.hero__copy, .mainTopics { max-width:720px; padding-inline:24px; font-size:1.6rem; line-height:1.9; }
+.mainTopics__catch { font-size:clamp(2.4rem, 4vw, 3.4rem); line-height:1.4; }
+.section { scroll-margin-top:90px; }
+.concept__btn a { padding:14px 22px; margin:12px auto; font-size:1.6rem; z-index:auto; letter-spacing:.03em; }
+.concept__btn a::after { display:none; }
+a:focus-visible { outline:2px solid #691c23; outline-offset:4px; }
+.section--menu { max-width:1100px; margin-inline:auto; }
+.menu { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; margin:28px auto; }
+.menu .menu__item { margin:0; padding:0; box-shadow:none; border:1px solid #e4ddd5; border-radius:8px; overflow:hidden; text-align:left; }
+.product-photo { display:block; width:100%; height:auto; aspect-ratio:4/3; object-fit:cover; }
+.menu__content { padding:20px; }
+.menu__menu { margin:0; font-size:2rem; line-height:1.5; }
+.menu__price { display:block; color:#691c23; white-space:nowrap; }
+.menu__styles { font-size:1.3rem; margin-top:8px; }
+.menu__takeaway { font-size:1.3rem; margin-top:6px; }
+.menu .menu__txt { font-size:1.5rem; line-height:1.8; text-align:left; }
+.signature { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:36px; padding:28px; background:#f7f2ec; border-radius:8px; margin:36px auto; }
+.signature__photo { display:block; width:100%; height:auto; border-radius:4px; }
+.signature__label { color:#691c23; font-size:1.3rem; letter-spacing:.08em; margin-bottom:14px; }
+.signature h3 { font-size:clamp(2.4rem,3vw,3.2rem); line-height:1.4; }
+.signature__japanese { font-size:1.7rem; }
+.signature__price { font-size:2.4rem; color:#691c23; margin:12px 0; }
+.signature__content > p:last-child { line-height:1.9; }
+.address, .directions__item, .menu__txt { font-size:1.6rem; line-height:1.8; }
+.footer { padding-top:50px; }
+@media(max-width:768px) { .menu { grid-template-columns:1fr; gap:20px; } html[lang=en] .menu .menu__item { margin:0; } .signature { grid-template-columns:1fr; gap:20px; padding:20px; } .nav:not(.is-open) { visibility:hidden; } .signature__photo { max-height:400px; object-fit:contain; } }
+@media(prefers-reduced-motion:reduce) { *, *::before, *::after { scroll-behavior:auto !important; transition:none !important; animation:none !important; } }

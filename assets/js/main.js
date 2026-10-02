@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (targetEl) {
                 const offset = header.offsetHeight; // ヘッダー高さ分を補正
                 const topPos = targetEl.getBoundingClientRect().top + window.scrollY - offset;
-                window.scrollTo({ top: topPos, behavior: "smooth" });
+                window.scrollTo({ top: topPos, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
             }
         });
     });
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (slides.length > 0) {
         slides[currentIndex].classList.add("active");
 
-        setInterval(() => {
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) setInterval(() => {
             slides[currentIndex].classList.remove("active");
             currentIndex = (currentIndex + 1) % slides.length;
             slides[currentIndex].classList.add("active");
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const topBtn = document.querySelector(".fa-chevron-up");
     if (topBtn) {
         topBtn.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
+            window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
         });
     }
 });
