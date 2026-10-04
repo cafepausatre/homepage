@@ -43,13 +43,17 @@ document.addEventListener("DOMContentLoaded", function() {
     // ===== ナビリンククリックで閉じる + スムーズスクロール =====
     navLinks.forEach(link => {
         link.addEventListener("click", function(e) {
-            e.preventDefault();
-
             setMenuState(false);
 
-            const targetId = this.getAttribute("href").substring(1);
+            const href = this.getAttribute("href");
+            // External links keep their native behavior, including target="_blank".
+            if (!href || !href.startsWith("#")) return;
+            if (e.defaultPrevented || e.button !== 0 || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+
+            const targetId = href.substring(1);
             const targetEl = document.getElementById(targetId);
             if (targetEl) {
+                e.preventDefault();
                 const offset = header.offsetHeight; // ヘッダー高さ分を補正
                 const topPos = targetEl.getBoundingClientRect().top + window.scrollY - offset;
                 window.scrollTo({ top: topPos, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
