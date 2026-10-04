@@ -28,7 +28,6 @@ html[lang="en"] .mainTopics__catch { font-size: clamp(2.4rem, 4vw, 3.4rem); line
 html[lang="en"] .menu__item { min-width: 0; }
 html[lang="en"] .address__station { font-size: 1.3rem; margin-top: 12px; }
 @media (max-width: 768px) {
-  html[lang="en"] .hero__copy br, html[lang="en"] .mainTopics br { display: none; }
   html[lang="en"] .menu__item { margin: 24px 0; }
 }
 @media (min-width: 769px) {
