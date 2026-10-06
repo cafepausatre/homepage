@@ -162,3 +162,50 @@
         font-size: 2.2rem;
     }
 }
+
+
+/* Match Japanese News typography to the rest of the Japanese site. */
+html[lang="ja"] .news-page__lead,
+html[lang="ja"] .news-article__body {
+    font-weight: 600;
+}
+
+/* Media / press contact */
+.news-media {
+    max-width: 760px;
+    margin: 64px auto 0;
+    padding: 30px 28px;
+    border-top: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+}
+.news-media__title {
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+.news-media__text {
+    font-size: 1.4rem;
+    line-height: 1.9;
+}
+.news-media__link {
+    display: inline-block;
+    margin-top: 16px;
+    font-size: 1.4rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+.news-article__media {
+    margin-top: 14px;
+}
+.news-article__media a {
+    font-size: 1.4rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+@media screen and (max-width: 768px) {
+    .news-media {
+        margin-top: 48px;
+        padding: 24px 18px;
+    }
+}
