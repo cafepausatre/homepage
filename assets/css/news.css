@@ -456,3 +456,48 @@ html[lang="ja"] .news-article--pot .news-article__body {
     .pot-article__section { margin-bottom: 38px; }
     .pot-article__contact { margin-top: 42px; margin-bottom: 0; }
 }
+
+.gps-run-news .news-article__title {
+    margin-bottom: 24px;
+}
+
+.gps-run-news .news-article__body {
+    display: grid;
+    gap: 24px;
+    line-height: 1.85;
+}
+
+.gps-run-news__group {
+    display: grid;
+    gap: 8px;
+}
+
+.gps-run-news .news-article__body p {
+    margin: 0;
+}
+
+.gps-run-news__links {
+    display: grid;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.gps-run-news .news-article__external {
+    margin-top: 0;
+}
+
+.gps-run-news__photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 480px) {
+    html[lang="ja"] .gps-run-news .news-article__title {
+        font-size: clamp(1.8rem, 5.4vw, 2.2rem);
+    }
+
+    .gps-run-news .news-article__body {
+        gap: 20px;
+    }
+}
