@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="ja">
 <head>
+<script src="assets/js/site-language.js"></script>
+<link rel="canonical" href="https://cafepausatre.github.io/homepage/menu.html">
+<link rel="alternate" hreflang="ja" href="https://cafepausatre.github.io/homepage/menu.html">
+<link rel="alternate" hreflang="en" href="https://cafepausatre.github.io/homepage/menu-en.html">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>メニュー | Cafe Pausa Tre</title>
@@ -82,13 +86,18 @@ footer p{margin:0}
  .items li>.item-photo{grid-row:span 2}
  .items li>.prices{grid-column:2;text-align:left;display:flex;flex-wrap:wrap;gap:.2rem .75rem}
 }
+.header-actions{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap;justify-content:flex-end}
+.menu-language{display:flex;gap:.5rem;align-items:center;font-size:.875rem;white-space:nowrap}
+.menu-language a{padding:.5rem .125rem}
+.menu-language [aria-current]{font-weight:700;text-decoration:none}
+@media(max-width:400px){.header-inner{gap:.45rem}.header-actions{gap:.25rem}.order{padding-inline:.45rem}.menu-language{gap:.3rem}}
 </style>
 </head>
 <body>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="https://cafepausatre.github.io/homepage/">Cafe Pausa Tre</a>
-    <a class="order" href="https://liff.line.me/2008784114-viPevrmN">LINEで注文</a>
+    <a class="brand" href="index.html">Cafe Pausa Tre</a>
+    <div class="header-actions"><nav class="menu-language" aria-label="言語選択"><a href="menu.html" lang="ja" hreflang="ja" data-site-language="ja" aria-current="page">日本語</a><a href="menu-en.html" lang="en" hreflang="en" data-site-language="en">EN</a></nav><a class="order" href="https://liff.line.me/2008784114-viPevrmN">LINEで注文</a></div>
   </div>
 </header>
 <main>
@@ -168,6 +177,6 @@ footer p{margin:0}
     </section>
   </div>
 </main>
-<footer><div class="wrap"><p>価格はすべて税込です。</p><a href="https://cafepausatre.github.io/homepage/">公式サイトへ</a></div></footer>
+<footer><div class="wrap"><p>価格はすべて税込です。</p><a href="index.html">公式サイトへ</a></div></footer>
 </body>
 </html>
