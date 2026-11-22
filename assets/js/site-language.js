@@ -8,8 +8,10 @@
         try { localStorage.setItem(key, link.dataset.siteLanguage); } catch {}
     });
 
-    // Only the homepage entry URL negotiates language. Explicit page URLs stay stable.
-    if (!document.currentScript.hasAttribute('data-home-entry') || !location.pathname.endsWith('/')) return;
+    // Match language only at the site entry or an explicitly automatic menu link.
+    const homeEntry = document.currentScript.hasAttribute('data-home-entry') && location.pathname.endsWith('/');
+    const menuEntry = location.pathname.endsWith('/menu.html') && new URLSearchParams(location.search).get('lang') === 'auto';
+    if (!homeEntry && !menuEntry) return;
     let preferred;
     try { preferred = localStorage.getItem(key); } catch {}
     if (!supports(preferred)) {
@@ -17,8 +19,9 @@
         preferred = languages.find(supportsLanguage)?.slice(0, 2).toLowerCase() || 'en';
     }
     if (preferred === 'en') {
-        const destination = new URL('en.html', location.href);
+        const destination = new URL(menuEntry ? 'menu-en.html' : 'en.html', location.href);
         destination.search = location.search;
+        if (menuEntry) destination.searchParams.delete('lang');
         destination.hash = location.hash;
         location.replace(destination.href);
     }
